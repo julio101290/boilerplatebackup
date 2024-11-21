@@ -1,6 +1,6 @@
 <?php
 
-namespace julio101290\boilerplatbackup\Commands;
+namespace julio101290\boilerplatebackup\Commands;
 
 use CodeIgniter\CLI\BaseCommand;
 use Config\Database;
