@@ -72,7 +72,7 @@ class InstallCommandBackup extends BaseCommand
             $this->call('migrate');
             // then seed data
             $seeder = Database::seeder();
-            $seeder->call('julio101290\boilerplatesettings\Database\Seeds\BoilerplateSettingsSeeder');
+            $seeder->call('julio101290\boilerplatbackup\Database\Seeds\BoilerplateSettingsBackup');
         } catch (\Exception $e) {
             $this->showError($e);
         }

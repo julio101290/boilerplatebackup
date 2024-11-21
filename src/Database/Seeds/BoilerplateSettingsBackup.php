@@ -1,6 +1,6 @@
 <?php
 
-namespace julio101290\boilerplatesettings\Database\Seeds;
+namespace julio101290\boilerplatebackup\Database\Seeds;
 
 use CodeIgniter\Config\Services;
 use CodeIgniter\Database\Seeder;
