@@ -53,7 +53,7 @@ class BackupsController extends BaseController {
         }
         $titulos["title"] = lang('backups.title');
         $titulos["subtitle"] = lang('backups.subtitle');
-        return view('boilerplatebackup/backups', $titulos);
+        return view('julio101290\boilerplatebackup\Views\backups', $titulos);
     }
 
     /**
@@ -89,8 +89,6 @@ class BackupsController extends BaseController {
         $userName = user()->username;
         $idUser = user()->id;
         $datos = $this->request->getPost();
-        
-
 
         $host = config('Database')->default["hostname"];
         $dbname = config('Database')->default["database"];
@@ -100,14 +98,13 @@ class BackupsController extends BaseController {
 
         $DNS = "mysql:host=$host;port:$port;dbname=$dbname'";
 
-        $dbBackupConection = new \PDO('mysql:host='.$host.':' . $port . ';dbname=' . $dbname . '', $username, $password);
+        $dbBackupConection = new \PDO('mysql:host=' . $host . ':' . $port . ';dbname=' . $dbname . '', $username, $password);
 
         $mysqlBackup = new MySQLBackup($dbBackupConection, ROOTPATH . "writable/database/backup");
 
         try {
 
             $backup = $mysqlBackup->backup(false, true, false);
-            
         } catch (Exception $ex) {
 
             echo $ex->getMessage();
@@ -185,7 +182,7 @@ class BackupsController extends BaseController {
         $infoBackups = $this->backups->select("*")->where("uuid", $uuid)->first();
 
         $allBackups = $this->backups->select("*")->asArray()->findAll();
-        
+
         helper('auth');
         $userName = user()->username;
 
@@ -207,8 +204,7 @@ class BackupsController extends BaseController {
 
             $this->backups->select("*")->where("id>0")->delete();
             $this->backups->purgeDeleted();
-            
-            
+
             $this->backups->insertBatch($allBackups);
         } catch (Exception $ex) {
 
@@ -224,17 +220,16 @@ class BackupsController extends BaseController {
      * Download Backup
      */
     public function downloadBackup($uuid) {
-        
+
         helper('auth');
         $userName = user()->username;
         $idUser = user()->id;
-        
+
         $authorize = $auth = service('authorization');
-        
-        if(!($authorize->hasPermission("backups-permission", $idUser))){
-            
+
+        if (!($authorize->hasPermission("backups-permission", $idUser))) {
+
             return;
-            
         }
 
         $dataBackup = $this->backups->select("SQLFile,created_at")->where("uuid", $uuid)->find();

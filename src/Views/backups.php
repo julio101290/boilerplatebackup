@@ -7,7 +7,7 @@
 <!-- Section content -->
 <?= $this->section('content') ?>
 
-<?= $this->include('julio101290/boilerplatebackup/modulesBackups/modalCaptureBackups') ?>
+<?= $this->include('julio101290\boilerplatebackup\Views\modulesBackups\modalCaptureBackups') ?>
 
 <!-- SELECT2 EXAMPLE -->
 <div class="card card-default">
