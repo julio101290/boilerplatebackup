@@ -37,10 +37,10 @@ class BoilerplateBackup extends Seeder {
 
 
         // Permission
-        $this->authorize->createPermission('backups-permission', 'Permissions for backups');
+        $this->authorize->createPermission('backups-permissions', 'Permissions for backups');
 
         // Assign Permission to user
-        $this->authorize->addPermissionToUser('backups-permission', 1);
+        $this->authorize->addPermissionToUser('backups-permissions', 1);
 
     }
 
