@@ -6,9 +6,9 @@ use App\Controllers\BaseController;
 use julio101290\boilerplatebackup\Models\{
     BackupsModel
 };
-use App\Models\LogModel;
+use julio101290\boilerplatelog\Models\LogModel;
 use CodeIgniter\API\ResponseTrait;
-use App\Models\EmpresasModel;
+use julio101290\boilerplatecompanies\Models\EmpresasModel;
 use DatabaseBackupManager\MySQLBackup;
 
 class BackupsController extends BaseController {
