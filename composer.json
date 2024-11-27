@@ -25,7 +25,7 @@
         "julio101290/auth": "^1.0",
         "julio101290/boilerplate": "^1.0",
         "julio101290/mysql-backup": "^1.0",
-        "michalsn/codeigniter4-uuid": "^1.0",
+        "michalsn/codeigniter4-uuid": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.1",
