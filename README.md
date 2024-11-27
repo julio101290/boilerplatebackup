@@ -16,14 +16,14 @@
 ### Config michalsn/codeigniter4-uuid
 Download this repo and then enable it by editing app/Config/Autoload.php and adding the Michalsn\UuidModel namespace to the $psr4 array. For example, if you copied it into app/ThirdParty:
 
-<?php
-
-		$psr4 = [
-		'Config'      => APPPATH . 'Config',
-		APP_NAMESPACE => APPPATH,
-		'App'         => APPPATH,
-		'Michalsn\Uuid' => APPPATH . 'ThirdParty/codeigniter4-uuid/src',
-		];
+	<?php
+	
+	$psr4 = [
+	'Config'      => APPPATH . 'Config',
+	APP_NAMESPACE => APPPATH,
+	'App'         => APPPATH,
+	'Michalsn\Uuid' => APPPATH . 'ThirdParty/codeigniter4-uuid/src',
+	];
 
 ### Make the menu
 ![image](https://github.com/user-attachments/assets/62864d9c-d596-4a26-a3af-04c691b19f31)
