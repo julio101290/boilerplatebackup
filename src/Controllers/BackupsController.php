@@ -227,7 +227,7 @@ class BackupsController extends BaseController {
 
         $authorize = $auth = service('authorization');
 
-        if (!($authorize->hasPermission("backups-permission", $idUser))) {
+        if (!($authorize->hasPermission("backups-permissions", $idUser))) {
 
             return;
         }
