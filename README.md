@@ -11,7 +11,7 @@
 
 ### Run command for migration and seeder
 
-	boilerplatebackup:installbackup
+	php spark boilerplatebackup:installbackup
  
 ### Config michalsn/codeigniter4-uuid
 Download this repo and then enable it by editing app/Config/Autoload.php and adding the Michalsn\UuidModel namespace to the $psr4 array. For example, if you copied it into app/ThirdParty:
